@@ -4,16 +4,6 @@ $(document).ready(function(){
 	var upsideDown = $(".upsideDown");
     var upsideDownLength = upsideDown.length;
 
-
-// for (i = 0; i < upsideDownLength; i++) {
-// 		var g = Math.floor(Math.random()*classes.length);
-		
-// 		upsideDown.addClass(classes[g]);
-// 		classes.splice(g, 1);
-// 		upsideDown.splice(g, 1);
-// 		console.log(upsideDown);
-// 	}
-
 upsideDown.each(function(){
 	var g = Math.floor(Math.random()*classes.length);
 	$(this).addClass(classes[g]);
@@ -28,8 +18,14 @@ upsideDown.on("click", function(){
 		console.log(cardOne);
 		if (cardTwo.attr("class") === cardOne.attr("class")) {
 			console.log("we won");
+	cardOne.css("display","none");
+	cardTwo.css("display","none");
 		} else {
 			console.log("we lost");
+		
+
+      
+
 		}
 		});
 });
