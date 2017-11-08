@@ -12,21 +12,24 @@ upsideDown.each(function(){
 	
 upsideDown.on("click", function(){
 	var cardOne = $(this);
+	cardOne.off("click");
+
 	upsideDown.on("click", function(){
 		var cardTwo = $(this);	  
+		
+
 		console.log(cardTwo);
 		console.log(cardOne);
 		if (cardTwo.attr("class") === cardOne.attr("class")) {
 			console.log("we won");
 	cardOne.css("display","none");
 	cardTwo.css("display","none");
-		} else {
+		
+		
+} else {
 			console.log("we lost");
 		
-
-      
-
-		}
+  }
 		});
 });
 	
