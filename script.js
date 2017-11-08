@@ -7,7 +7,8 @@ $(document).ready(function(){
 	
 
 	for (i = 0; i < upsideDown.length; i++) {
-		upsideDown.addClass("red");
+		var g = Math.floor(Math.random()*classes.length);
+		console.log(g);
 	}
 	
 
