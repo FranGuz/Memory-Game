@@ -20,6 +20,20 @@ upsideDown.each(function(){
 	classes.splice(g, 1);
 });
 	
+upsideDown.on("click", function(){
+	var cardOne = $(this);
+	upsideDown.on("click", function(){
+		var cardTwo = $(this);	  
+		console.log(cardTwo);
+		console.log(cardOne);
+		if (cardTwo.attr("class") === cardOne.attr("class")) {
+			console.log("we won");
+		} else {
+			console.log("we lost");
+		}
+		});
+});
+	
 
 	
 });
