@@ -27,7 +27,7 @@ $(document).ready(function(){
 		$(".container").fadeIn();
     });
 	
-
+   // this function assigns a value to card one and card two, compares them and either makes them disappear or stay based on the class 
 	$(".card").on("click", function() {
 		if (cardOne) {
 			cardTwo = $(this);
