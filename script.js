@@ -10,36 +10,55 @@ $(document).ready(function(){
 		$(".container").fadeIn();
 	});
 	
-upsideDown.each(function(){
-	var g = Math.floor(Math.random()*classes.length);
-	$(this).addClass(classes[g]);
-	classes.splice(g, 1);
-});
+	upsideDown.each(function(){
+		var g = Math.floor(Math.random()*classes.length);
+		$(this).addClass(classes[g]);
+		classes.splice(g, 1);
+	});
+
+$(".card").on("click", function() {
+	if (cardOne) {
+		cardTwo = $(this);
+		$(this).removeClass("upsideDown");
+	}
+	if ($(this).hasClass("upsideDown")) {
+		$(this).removeClass("upsideDown");
+		$(this).off("click");
+		cardOne = $(this);
+
+
+		
+	} 
 	
-$(".upsideDown").on("click", function(){
-	$(this).removeClass("upsideDown");
-	$(this).off("click")
-	cardOne = $(this);
-	console.log(cardOne);
-	if ($("div").hasClass("upsideDown")){
-		$(".upsideDown").on("click", function(){
-		cardTwo = $(this);	 
-		cardTwo.removeClass("upsideDown");
-		console.log(cardTwo);
-		console.log(cardOne);
+	console.log(cardOne, cardTwo);
+	// $(".upsideDown").on("click", function(){
+	// 	$(this).removeClass("upsideDown");
+	// 	$(this).off("click")
+	// 	$(".upsideDown").off("click")
+	// 	cardOne = $(this);
+	// 	console.log(cardOne+"1")
+	// });
+
+
+	// if ($(this).hasClass("upsideDown")){
+	// 	cardTwo = $(this);	 
+	// 	cardTwo.removeClass("upsideDown");
+	// 	console.log(cardTwo+"2");
+	// 	}
 		
 	
-		if (cardTwo.attr("class") === cardOne.attr("class")) {
-			console.log("we won");
-			cardOne.fadeOut(500);
-			cardTwo.fadeOut(500);
+	// 	if (cardTwo.attr("class") === cardOne.attr("class")) {
+	// 		console.log("we won");
+	// 		cardOne.fadeOut(500);
+	// 		cardTwo.fadeOut(500);
+		
 	
-	
-		} else {
-				console.log("we lost");	
-			}
-			});
-	};
+	// 	} else {
+	// 		cardOne.addClass("upsideDown");
+	// 		cardTwo.addClass("upsideDown");
+	// 			console.log("we lost");	
+	// 		}
+	});
 
 
-	})})
+	});
