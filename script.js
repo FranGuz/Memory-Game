@@ -25,40 +25,26 @@ $(".card").on("click", function() {
 		$(this).removeClass("upsideDown");
 		$(this).off("click");
 		cardOne = $(this);
-
-
-		
 	} 
 	
 	console.log(cardOne, cardTwo);
-	// $(".upsideDown").on("click", function(){
-	// 	$(this).removeClass("upsideDown");
-	// 	$(this).off("click")
-	// 	$(".upsideDown").off("click")
-	// 	cardOne = $(this);
-	// 	console.log(cardOne+"1")
-	// });
-
-
-	// if ($(this).hasClass("upsideDown")){
-	// 	cardTwo = $(this);	 
-	// 	cardTwo.removeClass("upsideDown");
-	// 	console.log(cardTwo+"2");
-	// 	}
-		
 	
-	// 	if (cardTwo.attr("class") === cardOne.attr("class")) {
-	// 		console.log("we won");
-	// 		cardOne.fadeOut(500);
-	// 		cardTwo.fadeOut(500);
-		
-	
-	// 	} else {
-	// 		cardOne.addClass("upsideDown");
-	// 		cardTwo.addClass("upsideDown");
-	// 			console.log("we lost");	
-	// 		}
-	});
+	if (cardTwo.attr("class") === cardOne.attr("class")) {
+	 	console.log("we won");
+	 	cardOne.fadeOut(500);
+	 	cardTwo.fadeOut(500);
+		cardOne.addClass("upsideDown");
+		cardTwo.addClass("upsideDown");
+		cardOne = null;
+		cardTwo = null;
+	} else {
+ 		cardOne.addClass("upsideDown");
+ 		cardTwo.addClass("upsideDown");
+ 		console.log("we lost");	
+		cardOne = null;
+		cardTwo = null;
+ 	}
+});
 
 
-	});
+});
