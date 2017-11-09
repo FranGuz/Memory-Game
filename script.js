@@ -10,7 +10,20 @@ $(document).ready(function(){
 		$(".container").fadeIn();
 	});
 	
-	upsideDown.each(function(){
+
+    $("#reset").on("click", function(){
+       
+       $(".container").fadeOut();
+
+    $(".card").removeClass("red","blue","yellow","green").addClass("upsideDown").css("display","block");
+
+      $(".container").fadeIn();
+     
+
+
+    });
+
+  upsideDown.each(function(){
 		var g = Math.floor(Math.random()*classes.length);
 		$(this).addClass(classes[g]);
 		classes.splice(g, 1);
@@ -44,6 +57,11 @@ $(".card").on("click", function() {
 		cardOne = null;
 		cardTwo = null;
  	}
+
+
+
+
+
 });
 
 
