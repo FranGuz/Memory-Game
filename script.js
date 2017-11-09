@@ -5,22 +5,28 @@ $(document).ready(function(){
 	var upsideDownLength = upsideDown.length;
 	var cardOne = null;
 	var cardTwo = null;
+	
+	function random() {
+		upsideDown.each(function(){
+		var g = Math.floor(Math.random()*classes.length);
+		$(this).addClass(classes[g]);
+		classes.splice(g, 1);
+	});
+		classes.splice("red", "red", "blue", "blue", "green", "green", "yellow", "yellow", 8)
+	}
 
 	$("#start").on("click",function() {
+		random();
 		$(".container").fadeIn();
 	});
 
     $("#reset").on("click", function(){
 		$(".container").fadeOut(); 
-		$(".card").removeClass("red","blue","yellow","green").addClass("upsideDown").css("display","block");
+		$(".card").removeClass("red").removeClass("yellow").removeClass("blue").removeClass("green").addClass("upsideDown").css("display","block");
+		random();
 		$(".container").fadeIn();
     });
 	
-	upsideDown.each(function(){
-		var g = Math.floor(Math.random()*classes.length);
-		$(this).addClass(classes[g]);
-		classes.splice(g, 1);
-	});
 
 	$(".card").on("click", function() {
 		if (cardOne) {
