@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$(this).addClass(classes[g]);
 		classes.splice(g, 1);
 	});
-		classes.splice("red", "red", "blue", "blue", "green", "green", "yellow", "yellow", 8)
+		classes.splice(0,0, "red", "red", "blue", "blue", "green", "green", "yellow", "yellow")
 	}
     // the start on click function displays our game 
 	$("#start").on("click",function() {
