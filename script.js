@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var upsideDownLength = upsideDown.length;
 	var cardOne = null;
 	var cardTwo = null;
-	
+	// this function returns a random class to our upside down divs 
 	function random() {
 		upsideDown.each(function(){
 		var g = Math.floor(Math.random()*classes.length);
@@ -14,12 +14,12 @@ $(document).ready(function(){
 	});
 		classes.splice("red", "red", "blue", "blue", "green", "green", "yellow", "yellow", 8)
 	}
-
+    // the start on click function displays our game 
 	$("#start").on("click",function() {
 		random();
 		$(".container").fadeIn();
 	});
-
+   // the rest function resets our game and rassigns classes in a random order  
     $("#reset").on("click", function(){
 		$(".container").fadeOut(); 
 		$(".card").removeClass("red").removeClass("yellow").removeClass("blue").removeClass("green").addClass("upsideDown").css("display","block");
