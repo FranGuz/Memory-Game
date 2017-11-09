@@ -18,28 +18,28 @@ upsideDown.each(function(){
 	
 $(".upsideDown").on("click", function(){
 	$(this).removeClass("upsideDown");
+	$(this).off("click")
 	cardOne = $(this);
-	console.log(cardOne)
-	});
-
-if ($("div").hasClass("upsideDown")){
-	$(".upsideDown").on("click", function(){
-	cardTwo = $(this);	 
-	cardTwo.removeClass("upsideDown");
-	console.log(cardTwo);
 	console.log(cardOne);
+	if ($("div").hasClass("upsideDown")){
+		$(".upsideDown").on("click", function(){
+		cardTwo = $(this);	 
+		cardTwo.removeClass("upsideDown");
+		console.log(cardTwo);
+		console.log(cardOne);
+		
 	
+		if (cardTwo.attr("class") === cardOne.attr("class")) {
+			console.log("we won");
+			cardOne.fadeOut(500);
+			cardTwo.fadeOut(500);
+	
+	
+		} else {
+				console.log("we lost");	
+			}
+			});
+	};
 
-	if (cardTwo.attr("class") === cardOne.attr("class")) {
-		console.log("we won");
-		cardOne.fadeOut(500);
-		cardTwo.fadeOut(500);
 
-
-	} else {
-			console.log("we lost");	
-    	}
-		});
-	}
-
-});
+	})})
