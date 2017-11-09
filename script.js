@@ -9,60 +9,48 @@ $(document).ready(function(){
 	$("#start").on("click",function() {
 		$(".container").fadeIn();
 	});
-	
 
     $("#reset").on("click", function(){
-       
-       $(".container").fadeOut();
-
-    $(".card").removeClass("red","blue","yellow","green").addClass("upsideDown").css("display","block");
-
-      $(".container").fadeIn();
-     
-
-
+		$(".container").fadeOut(); 
+		$(".card").removeClass("red","blue","yellow","green").addClass("upsideDown").css("display","block");
+		$(".container").fadeIn();
     });
-
-  upsideDown.each(function(){
+	
+	upsideDown.each(function(){
 		var g = Math.floor(Math.random()*classes.length);
 		$(this).addClass(classes[g]);
 		classes.splice(g, 1);
 	});
 
-$(".card").on("click", function() {
-	if (cardOne) {
-		cardTwo = $(this);
-		$(this).removeClass("upsideDown");
-	}
-	if ($(this).hasClass("upsideDown")) {
-		$(this).removeClass("upsideDown");
-		$(this).off("click");
-		cardOne = $(this);
-	} 
-	
-	console.log(cardOne, cardTwo);
-	
-	if (cardTwo.attr("class") === cardOne.attr("class")) {
-	 	console.log("we won");
-	 	cardOne.fadeOut(500);
-	 	cardTwo.fadeOut(500);
-		cardOne.addClass("upsideDown");
-		cardTwo.addClass("upsideDown");
-		cardOne = null;
-		cardTwo = null;
-	} else {
- 		cardOne.addClass("upsideDown");
- 		cardTwo.addClass("upsideDown");
- 		console.log("we lost");	
-		cardOne = null;
-		cardTwo = null;
- 	}
+	$(".card").on("click", function() {
+		if (cardOne) {
+			cardTwo = $(this);
+			$(this).removeClass("upsideDown")
+		}
+		if ($(this).hasClass("upsideDown")) {
+			$(this).removeClass("upsideDown");
+			$(this).off("click");
+			cardOne = $(this);
+		} 
 
+		console.log(cardOne, cardTwo);
 
-
-
-
-});
+		if (cardTwo.attr("class") === cardOne.attr("class")) {
+			console.log("we won");
+			cardOne.fadeOut(500);
+			cardTwo.fadeOut(500);
+			cardOne.addClass("upsideDown");
+			cardTwo.addClass("upsideDown");
+			cardOne = null;
+			cardTwo = null;
+		} else {
+			cardOne.addClass("upsideDown");
+			cardTwo.addClass("upsideDown");
+			console.log("we lost");	
+			cardOne = null;
+			cardTwo = null;
+		}
+	});
 
 
 });
