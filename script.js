@@ -7,6 +7,7 @@ $(document).ready(function(){
 	var cardTwo = null;
 	
 	// this function returns a random class to our upside down divs 
+	
 	function random() {
 		upsideDown.each(function(){
 		var g = Math.floor(Math.random()*classes.length);
@@ -38,6 +39,7 @@ $(document).ready(function(){
    // this function assigns a value to card one and card two, compares them and either makes them disappear or stay based on the class 
 	
 	$(".card").on("click", function() {
+		
 		if (cardOne) {
 			cardTwo = $(this);
 			$(this).removeClass("upsideDown");
