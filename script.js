@@ -55,8 +55,6 @@ $(document).ready(function(){
 			console.log("we won");
 			cardOne.fadeOut(500);
 			cardTwo.fadeOut(500);
-			cardOne.addClass("upsideDown");
-			cardTwo.addClass("upsideDown");
 			cardOne = null;
 			cardTwo = null;
 		} else {
