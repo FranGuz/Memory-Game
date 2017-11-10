@@ -31,7 +31,7 @@ $(document).ready(function(){
    // the rest function resets our game and rassigns classes in a random order  
     $("#reset").on("click", function(){
 		$(".container").hide(); 
-		$(".card").removeClass("red").removeClass("yellow").removeClass("blue").removeClass("green").addClass("upsideDown").css("display","block");
+		$(".card").removeClass("red yellow blue green").addClass("upsideDown").css("display","block");
 		random();
 		$(".container").fadeIn();
     });
@@ -67,6 +67,6 @@ $(document).ready(function(){
 			}, 3000)
 		}
 	});
-
+	console.log($(".card"))
 
 });
