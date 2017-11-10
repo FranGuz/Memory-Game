@@ -36,7 +36,6 @@ $(document).ready(function(){
     });
 	
    // this function assigns a value to card one and card two, compares them and either makes them disappear or stay based on the class 
-	$(".card").off("click");
 	
 	$(".card").on("click", function() {
 		if (cardOne) {
@@ -45,7 +44,6 @@ $(document).ready(function(){
 		}
 		if ($(this).hasClass("upsideDown")) {
 			$(this).removeClass("upsideDown");
-			$(this).off("click");
 			cardOne = $(this);
 		} 
 
