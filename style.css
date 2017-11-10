@@ -1,38 +1,116 @@
+body {
+	background-image: url(images/white-2398946_1920.jpg);
+}
 
+.buttons {
+	text-align: center;
+	font-family: sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	margin-top: 30px;
+	justify-content: center;
+	max-width: 350px;
+}
+
+button {
+	font-size: 17px;
+	width: 250px;
+	padding: 15px;
+	margin: 6px;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	margin-bottom: 30px;
+}
+
+#start {
+	background-color: 2B01FF;
+	color: pink;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: oblique;
+	border: none;
+	box-shadow: 5px 5px 5px grey;
+}
+
+#start:hover, #reset:hover {
+	background-color: pink;
+	color: 2B01FF;
+}
+
+#reset {
+	display: none;
+	background-color: 2B01FF;
+	color: pink;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: oblique;
+	border: none;
+	box-shadow: 5px 5px 5px grey;
+}
 
 .red {
-	background-color: red;
-	width: 150px;
-	height: 150px;
+	background-image: url(images/red.jpg);
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	box-shadow: 3px 3px 3px grey;
+	border-radius: 50%;
 }
 
 .blue {
-	background-color: blue;
-	width: 150px;
-	height: 150px;
+	background-image: url(images/blue.jpg);
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	box-shadow: 3px 3px 3px grey;
+	border-radius: 50%;
 }
 
 .green {
-	background-color: green;
-	width: 150px;
-	height: 150px;
+	background-image: url(images/green.jpg);
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	box-shadow: 3px 3px 3px grey;
+	border-radius: 50%;
 }
 
 .yellow {
-	background-color: yellow;
-	width: 150px;
-	height: 150px;
+	background-image: url(images/yellow.jpg);
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	box-shadow: 3px 3px 3px grey;
+	border-radius: 50%;
 }
 
 .upsideDown {
-	background-color: saddlebrown;
-	width: 150px;
-	height: 150px;
+	background-image: url(images/black%20wood.jpg);
+	width: 100px;
+	height: 100px;
 	margin: 10px;
+	box-shadow: 3px 3px 3px grey;
+	border-radius: 2px;
 }
+
+.upsideDown:hover {
+	filter: brightness(250%);
+	filter: contrast(60%);
+}
+
 .container {
 	display: none;
-	display:flex;
+	margin: 0 auto;
+	max-width: 250px;
+	padding: 30px;
+	padding-top: 15px;
+	border-radius: 15px;
 	flex-flow: wrap;
 	justify-content: center;
      
