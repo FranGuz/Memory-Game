@@ -132,3 +132,7 @@ h2 {
 		margin-top: 35px;
 	}
 }
+
+.win{
+	display: none;
+}
