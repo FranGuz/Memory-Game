@@ -53,16 +53,18 @@ $(document).ready(function(){
 
 		if (cardTwo.attr("class") === cardOne.attr("class")) {
 			console.log("we won");
-			cardOne.fadeOut(500);
-			cardTwo.fadeOut(500);
+			cardOne.delay(3000).fadeOut(500);
+			cardTwo.delay(3000).fadeOut(500);
 			cardOne = null;
 			cardTwo = null;
 		} else {
-			cardOne.addClass("upsideDown");
-			cardTwo.addClass("upsideDown");
-			console.log("we lost");	
-			cardOne = null;
-			cardTwo = null;
+			setTimeout(function(){
+				$(cardOne).addClass("upsideDown");
+				$(cardTwo).addClass("upsideDown");
+				console.log("timeout working");
+				cardOne = null;
+				cardTwo = null;
+			}, 3000)
 		}
 	});
 
