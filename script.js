@@ -53,8 +53,8 @@ $(document).ready(function(){
 
 		if (cardTwo.attr("class") === cardOne.attr("class")) {
 			console.log("we won");
-			cardOne.delay(3000).fadeOut(250);
-			cardTwo.delay(3000).fadeOut(250);
+			cardOne.delay(3000).fadeOut(500);
+			cardTwo.delay(3000).fadeOut(500);
 			cardOne = null;
 			cardTwo = null;
 		} else {
